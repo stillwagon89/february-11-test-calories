@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calorie Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🍽️ Calorie Tracker</h1>
+            <p class="subtitle">Track your meals and calories easily</p>
+        </header>
+
+        <main>
+            <section class="input-section">
+                <label for="meal-input">What did you eat?</label>
+                <textarea
+                    id="meal-input"
+                    placeholder="e.g., 2 scrambled eggs and toast"
+                    rows="3"
+                    autofocus
+                ></textarea>
+                <button id="add-meal-btn" class="btn btn-primary">Add Meal</button>
+            </section>
+
+            <section class="meals-section">
+                <div class="section-header">
+                    <h2>Today's Meals</h2>
+                    <button id="clear-all-btn" class="btn btn-secondary">Clear All</button>
+                </div>
+                <div id="meals-container" class="meals-container">
+                    <p class="empty-state">No meals added yet. Start tracking your calories!</p>
+                </div>
+            </section>
+
+            <section class="total-section">
+                <div class="total-calories">
+                    <span class="total-label">Total Calories:</span>
+                    <span id="total-value" class="total-value">0</span>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>Built with vanilla JavaScript • Data is saved locally</p>
+        </footer>
+    </div>
+
+    <script src="calorieData.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
